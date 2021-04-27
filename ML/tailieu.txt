@@ -1,0 +1,7 @@
+article
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2766-9?fbclid=IwAR2LBFZk6inktNVPtNiGvbbx-QyZmC9vrlK0CYRaGo0ANO6IiJoIma0HJh0#Sec2
+https://www.cell.com/molecular-therapy-family/nucleic-acids/fulltext/S2162-2531(20)30132-3?fbclid=IwAR3vK9aN02ajHdcroOKWH3EBg3If9SlbbTrKN9ot5XjlZM58SrFQjOZ7tkU#secsectitle0065
+
+dataset
+https://raw.githubusercontent.com/dataprofessor/AMP/main/train_po.fasta
+https://raw.githubusercontent.com/dataprofessor/AMP/main/train_ne.fasta
