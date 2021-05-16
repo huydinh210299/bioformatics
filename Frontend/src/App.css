@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+  background-image: url('https://i.pinimg.com/originals/4a/94/26/4a94268541d7a0ed95a8be5138e8a288.jpg');
+  background-size: cover;
+}
+.ant-carousel{
+  margin: 0px 50px !important;
+}
+.slick-dots-bottom li{
+  z-index: 100;
+  background-color: #364d79;
+}
+/* .slick-active{
+  background-color: #43e843;
+} */
+.slick-list{
+  background-image: url('https://news.mit.edu/sites/default/files/download/201804/MIT-Antimicrobial-Peptide-PRESS.jpg');
+  background-size: 500px;
+}
+.image{
+  height: 300px;
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.carousel-item{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 10px;
+}
+.ant-form-item-required{
+  display: none !important;
+}
+.ant-form-item-explain-error{
+  font-size: 18px !important;
+}
+
+.App h1{
+  color: #fff;
+}
+.App h2{
+  color: #fff;
+}
+.text-input{
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100px;
+}
+
+.chose{
+  margin: 20px;
+  font-size: 20px;
+}
+.ant-btn-primar{
+  font-size: 20px;
+  height: auto;
+  margin: 10px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+
