@@ -69,20 +69,23 @@ function App() {
     }
 
     setTimeout(async ()=>{
-      setLoading(false);
+      console.log('resp1', res1.data.filename);
       axios.get(`http://127.0.0.1:5000/result?filename=${res1.data.filename}`)
       .then((res) => {
         setResult(res.data);
         console.log('resp2', res.data);
+
+        setLoading(false);
       })
       .catch((err)=>{
+        setLoading(false);
         notification['error']({
           message: 'Request to server error!',
           description: 'Time out of server'
         });
       });
       
-    }, 4000);
+    }, 1000);
   }
   return (
     <div className="App">

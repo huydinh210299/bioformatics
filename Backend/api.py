@@ -28,7 +28,6 @@ class Classify(Resource):
         check_fn = os.path.exists(filename)
         while(not check_fn):
             check_fn = os.path.exists(filename)
-            pass
         try:
             rs =  classification.antiMicroable('./'+ filename)
             result = rs.to_json(orient="records")
