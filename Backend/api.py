@@ -25,10 +25,6 @@ class Classify(Resource):
     def get(Self):
         args = request.args
         filename = args["filename"]
-        check_fn = os.path.exists(filename)
-        while(not check_fn):
-            check_fn = os.path.exists(filename)
-            pass
         try:
             rs =  classification.antiMicroable('./'+ filename)
             result = rs.to_json(orient="records")
@@ -55,7 +51,7 @@ class UploadSeq(Resource):
             args = parser.parse_args()
             proseq = args['seq']
             fn_fasta = classification.paacBySeq(proseq)
-            fn_csv = fn_fasta.strip('.fasta') + '.paac.csv'
+            fn_csv = fn_fasta.split('.')[0] + '.paac.csv'
             return {'filename': fn_csv}
         except:
             raise BadRequest()
