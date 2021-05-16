@@ -23,16 +23,20 @@ class HelloWorld(Resource):
 @api.route('/result')
 class Classify(Resource):
     def get(Self):
+        args = request.args
+        filename = args["filename"]
+        check_fn = os.path.exists(filename)
+        while(not check_fn):
+            check_fn = os.path.exists(filename)
+            pass
         try:
-            args = request.args
-            filename = args["filename"]
             rs =  classification.antiMicroable('./'+ filename)
             result = rs.to_json(orient="records")
             parsed = json.loads(result)
             json.dumps(parsed, indent=4)
             if os.path.exists(filename):
                 os.remove(filename)
-            filename = filename.rstrip('.paac.csv') + '.fasta'
+            filename = filename.split(".")[0] + '.fasta'
             if os.path.exists(filename):
                 os.remove(filename)
             return parsed
@@ -71,7 +75,7 @@ class Upload(Resource):
             fn = uploaded_file.filename
             uploaded_file.save(fn)
             fn_fasta = classification.paacByFile(fn)
-            fn_csv = fn_fasta.strip('.fasta') + '.paac.csv'
+            fn_csv = fn_fasta.split(".")[0] + '.paac.csv'
             return {'filename': fn_csv}
         except:
             raise BadRequest()

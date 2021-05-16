@@ -61,7 +61,10 @@ class Classify:
     model = seft.loadModel()
     yPred = model.predict(df)
     yPred = pd.DataFrame(yPred,columns=['class'])
-    fasta_file = input_fname.rstrip('.paac.csv') + '.fasta'
+    print(input_fname)
+    fasta_file = input_fname.split(".")[1]
+    fasta_file = '.' + fasta_file + '.fasta'
+    print(fasta_file)
     mydict = seft.fasta_to_Array(fasta_file)
     df1 = pd.DataFrame(mydict,columns=['ID', 'Seq'])
     result = pd.concat([df1, yPred], axis=1, ignore_index=True)
