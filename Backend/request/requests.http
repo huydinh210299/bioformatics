@@ -5,7 +5,7 @@ GET http://127.0.0.1:5000/hello HTTP/1.1
 GET http://127.0.0.1:5000/result?filename=aklahhubdw.paac.csvsadsa HTTP/1.1
 
 ### get classify: success
-GET http://127.0.0.1:5000/result?filename=yiahbuclon.paac.csv HTTP/1.1
+GET http://127.0.0.1:5000/result?filename=rhmbtqwag.paac.csv HTTP/1.1
 
 ### post : sequences
 POST http://127.0.0.1:5000/upload-data/seq HTTP/1.1
