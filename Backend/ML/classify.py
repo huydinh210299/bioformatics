@@ -1,6 +1,6 @@
 ## import thu vien
 import os
-from Pfeature.pfeature import paac_wp
+from Pfeature.pfeature import aac_wp
 import pandas as pd
 import pickle
 from Bio import SeqIO
@@ -12,14 +12,14 @@ import threading
 class Classify:
 
   # Ham thuc hien generate du lieu
-  def paac(seft, input):
+  def aac(seft, input):
     a = input.rstrip('fasta')
-    output = a + 'paac.csv'
-    df_out = paac_wp(input, output,4,0.2)
+    output = a + 'aac.csv'
+    df_out = aac_wp(input, output)
     df = pd.read_csv(output)
 
   # Ham luu seq truyen vao thanh file va genarate ra du lieu
-  def paacBySeq(seft, seq):
+  def aacBySeq(seft, seq):
     fileName = string.ascii_lowercase
     fileName = ''.join(random.choice(fileName) for i in range(10))
     fileName = fileName + ".fasta"
@@ -28,16 +28,16 @@ class Classify:
       # Writing data to a file
       file.write(">001\n")
       file.write(seq)
-    genarateThread = threading.Thread(target=seft.paac,args=(fileName,))
+    genarateThread = threading.Thread(target=seft.aac,args=(fileName,))
     genarateThread.start()
     return fileName
 
-  def paacByFile(seft, input_fname):
+  def aacByFile(seft, input_fname):
     fileName = string.ascii_lowercase
     fileName = ''.join(random.choice(fileName) for i in range(10))
     fileName = fileName + ".fasta"
     os.rename(input_fname, fileName)
-    genarateThread = threading.Thread(target=seft.paac,args=(fileName,))
+    genarateThread = threading.Thread(target=seft.aac,args=(fileName,))
     genarateThread.start()
     return fileName
 
