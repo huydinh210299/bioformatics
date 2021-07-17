@@ -14,7 +14,7 @@ unzip Pfeature.zip
 cd Pfeature
 python setup.py install
 ```
-### From WEB foler
+### From Backend foler
 ```bash
 python api.py
 ```
