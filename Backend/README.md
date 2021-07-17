@@ -1,9 +1,6 @@
+# Backend of project build in Python and framework Flask RestpLus
+You nead to install Python and Pip first in [here](https://www.python.org/downloads/)
 ## To run this backend
-### From WEB foler
-```bash
-python api.py
-```
-
 ### Library installation
 ```bash
 pip install Flask
@@ -16,4 +13,8 @@ higher version of werkzeug will make error
 unzip Pfeature.zip
 cd Pfeature
 python setup.py install
+```
+### From WEB foler
+```bash
+python api.py
 ```
